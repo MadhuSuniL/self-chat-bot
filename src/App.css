@@ -1,0 +1,50 @@
+::-webkit-scrollbar {
+    width: 2px;
+    height: 5px; /* Set the desired width for your scrollbar */
+}
+::-webkit-scrollbar-thumb {
+    background-color: whitesmoke; /* Customize the thumb color */
+    border-radius: 4px;
+    height: 5px; /* Round the corners of the thumb */
+}
+
+/* App.css */
+@keyframes wave {
+    0%, 60%, 100% {
+      transform: initial;
+    }
+    30% {
+      transform: translateY(-1px);
+    }
+  }
+  
+  .typing span {
+    display: inline-block;
+    animation: wave 2.0s infinite;
+  }
+  
+  .typing span:nth-child(2) {
+    animation-delay: 0.1s;
+  }
+  
+  .typing span:nth-child(3) {
+    animation-delay: 0.2s;
+  }
+  
+  .typing span:nth-child(4) {
+    animation-delay: 0.3s;
+  }
+  
+  .typing span:nth-child(5) {
+    animation-delay: 0.4s;
+  }
+  
+  .typing span:nth-child(6) {
+    animation-delay: 0.5s;
+  }
+  
+  .typing span:nth-child(7) {
+    animation-delay: 0.6s;
+  }
+  
+  
