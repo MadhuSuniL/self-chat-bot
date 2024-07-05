@@ -1,5 +1,6 @@
 import React from 'react'
 import MadhuImg from '../myimg.png'
+import ReactMarkdown from 'react-markdown';
 
 const Answer = ({text}) => {
   return (
@@ -12,7 +13,7 @@ const Answer = ({text}) => {
       <div className="chat-header text-black font-semibold">
         Madhu
       </div>
-      <div className="chat-bubble bg-gray-100  text-gray-700">{text}</div>
+      <div className="chat-bubble bg-gray-100  text-gray-700"><ReactMarkdown>{text}</ReactMarkdown></div>
     </div>
   )
 }

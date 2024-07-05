@@ -9,7 +9,7 @@ export default function Madhu() {
   const [prompt, setPrompt] = useState('')
   const [promptA, setPromptA] = useState('')
   const [isLoading, setIsLoading] = useState(false);
-  const [chat, setChat] = useState([]);
+  const [chat, setChat] = useState([welcome]);
 
   const scroll = () => {
     let ele = document.getElementById('scroll-ele')
@@ -21,6 +21,7 @@ export default function Madhu() {
 
   const get_answer = (promptX = null) => {
     setIsLoading(true);
+    setPromptA(prompt)
     setPrompt('');
     let final_prompt = promptX || prompt
     generate_answer(final_prompt).then(answer => {
@@ -37,24 +38,37 @@ export default function Madhu() {
   }, [chat, isLoading]);
 
   return (
-    <div className="bg-gradient-to-b from-purple-500 via-purple-300 to-gray-200 h-screen flex justify-center items-center">
+    <div className="bg-gradient h-screen flex justify-center items-center">
       <div className=" bg-transparent text-black w-full max-w-[700px] h-full flex flex-col rounded">
-        <ChatHeader isLoading = {isLoading} setPrompt = {setPrompt} setPromptA = {setPromptA} get_answer = {get_answer} />
-        <div className="flex-grow overflow-auto">
+        <div className='flex-0'>
+          <ChatHeader isLoading = {isLoading} setPrompt = {setPrompt} setPromptA = {setPromptA} get_answer = {get_answer} />
+        </div>
+        <div className="flex-1 overflow-auto">
           <Chat 
             chat={chat} 
             prompt={promptA} 
             isLoading = {isLoading} 
           />
         </div>
-        <ChatFooter
-          prompt={prompt}
-          setPrompt={setPrompt}
-          setPromptA={setPromptA}
-          get_answer={get_answer}
-          isLoading={isLoading}
-        />
+        <div className='flex-0'>
+          <ChatFooter
+            prompt={prompt}
+            setPrompt={setPrompt}
+            get_answer={get_answer}
+            isLoading={isLoading}
+          />
+        </div>
       </div>
     </div>
   );
+}
+
+
+
+const welcomeText = `I am a Python Full Stack Developer with over 1 year of experience. I have a strong background in developing web applications using Python and its frameworks, along with frontend technologies like ReactJS. I am passionate about coding, AI applications, and continuously learning new skills.`
+
+
+const welcome = {
+  prompt : null,
+  answer : welcomeText
 }
