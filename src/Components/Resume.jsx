@@ -19,7 +19,7 @@ const Resume = () => {
       <p><strong>Email:</strong> <a href="mailto:bagammagarimadhu@gmail.com">bagammagarimadhu@gmail.com</a></p>
       <p><strong>Phone:</strong> +919948377187</p>
       <p><strong>GitHub:</strong> <a href="https://github.com/MadhuSuniL" target="_blank" rel="noopener noreferrer">https://github.com/MadhuSuniL</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/madhu-sunil-833a84239" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/madhu-sunil-833a84239</a></p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/madhu-bagamma-gari-833a84239" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/madhu-bagamma-gari-833a84239</a></p>
       
       <h2 className="text-xl font-bold mt-4 mb-2">Skills</h2>
       <ul className="list-disc list-inside">
