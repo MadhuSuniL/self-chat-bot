@@ -83,54 +83,55 @@ const ChatHeader = ({
             <CiMenuKebab size={20} className='mx-2 mt-2 hover:scale-105' />
           </button>
           {menuOpen && (
-            <div className="absolute right-0 mt-2 w-56 bg-purple-400 text-black shadow-lg rounded-md z-50">
+            <div className="absolute right-0 mt-2 w-56 bg-purple-400 text-black shadow-lg rounded-md z-50 p-2">
               <ul className="py-1">
                 <li className="flex items-center hover:bg-purple-500 rounded-lg">
-                  <FaFileDownload className="mx-2 text-white" />
+                  <FaFileDownload size={17} className="mx-2 text-white" />
                   <a 
                     href="/resume.pdf" 
-                    download 
-                    className="block px-2 py-2 text-sm w-full"
+                    target="_blank" 
+                    // download 
+                    className="block px-2 py-2 text-sm w-full font-[600] text-white"
                   >
-                    Download Resume
+                    Open Resume
                   </a>
                 </li>
                 <li className="flex items-center hover:bg-purple-500 rounded-lg">
-                  <FaGithub className="mx-2 text-white" />
+                  <FaGithub size={17} className="mx-2 text-white" />
                   <a 
                     href="https://github.com/MadhuSuniL" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="block px-2 py-2 text-sm w-full"
+                    className="block px-2 py-2 text-sm w-full font-[600] text-white"
                   >
                     Open GitHub
                   </a>
                 </li>
                 <li className="flex items-center hover:bg-purple-500 rounded-lg">
-                  <FaLinkedin className="mx-2 text-white" />
+                  <FaLinkedin size={17} className="mx-2 text-white" />
                   <a 
-                    href="https://www.linkedin.com/in/madhu-sunil-833a84239" 
+                    href="https://www.linkedin.com/in/madhu-bagamma-gari-833a84239" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="block px-2 py-2 text-sm w-full "
+                    className="block px-2 py-2 text-sm w-full font-[600] text-white "
                   >
                     Open LinkedIn
                   </a>
                 </li>
                 <li className="flex items-center hover:bg-purple-500 rounded-lg">
-                  <FaEnvelope className="mx-2 text-white" />
+                  <FaEnvelope size={17} className="mx-2 text-white" />
                   <a 
                     href="mailto:bagammagarimadhu@gmail.com" 
-                    className="block px-2 py-2 text-sm w-full"
+                    className="block px-2 py-2 text-sm w-full font-[600] text-white"
                   >
                     Send Email
                   </a>
                 </li>
                 <li className="flex items-center hover:bg-purple-500 rounded-lg">
-                  <FaPhone className="mx-2 text-white" />
+                  <FaPhone size={17} className="mx-2 text-white" />
                   <a 
                     href="tel:+919948377187" 
-                    className="block px-2 py-2 text-sm w-full"
+                    className="block px-2 py-2 text-sm w-full font-[600] text-white"
                   >
                     Call Phone
                   </a>
