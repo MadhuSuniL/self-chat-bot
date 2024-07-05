@@ -13,7 +13,10 @@ const Chat = ({
         {
             chat.map((c, index) => 
                 <div key={index}>
+                    {
+                        c.prompt &&
                     <Prompt text = {c.prompt} />
+                    }
                     <Answer text = {c.answer}/>
                 </div>
             )

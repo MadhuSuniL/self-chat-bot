@@ -8,6 +8,23 @@
     height: 5px; /* Round the corners of the thumb */
 }
 
+
+/* App.css */
+
+.bg-gradient {
+  background: linear-gradient(
+      rgba(168, 85, 247, 0.9), 
+      rgba(216, 180, 254, 0.9), 
+      rgba(240, 240, 240, 0.9)
+    ), 
+    url('../public/bg-image.webp'); /* Adjust the path as necessary */
+  background-size : contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+
 /* App.css */
 @keyframes wave {
     0%, 60%, 100% {

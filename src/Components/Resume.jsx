@@ -12,10 +12,8 @@ const Resume = () => {
           I am passionate about coding, AI applications, and continuously learning new skills.
         </p>
       </div>
-      <p><strong>Date of Birth:</strong> 28/03/2000</p>
-      <p><strong>Location:</strong> Velgode, Nandyal, Andhra Pradesh, India</p>
-      <p><strong>Marital Status:</strong> Single</p>
       <p><strong>Education:</strong> BSC Computer Science, December 2021</p>
+      <p><strong>Location:</strong> Velgode, Nandyal, Andhra Pradesh, India</p>
       
       <h2 className="text-xl font-bold mt-4 mb-2">Contact Information</h2>
       <p><strong>Email:</strong> <a href="mailto:bagammagarimadhu@gmail.com">bagammagarimadhu@gmail.com</a></p>
