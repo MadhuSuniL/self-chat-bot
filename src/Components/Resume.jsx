@@ -6,7 +6,7 @@ const Resume = () => {
       <h1 className="text-2xl font-bold mb-4">Madhu Bagamma Gari</h1>
       <div className="mb-4">
         <p>
-          I am a Python Full Stack Developer with over 1 year of experience. 
+        I am a Python Full Stack Developer with over 1 year of experience. 
           I have a strong background in developing web applications using 
           Python and its frameworks, along with frontend technologies like ReactJS.
           I am passionate about coding, AI applications, and continuously learning new skills.
