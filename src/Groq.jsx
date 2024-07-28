@@ -51,7 +51,6 @@ const prompt = ChatPromptTemplate.fromMessages([
 const chain = prompt.pipe(model);
 
 export const generate_answer = async (prompt) => {
-  console.log('generating answer')
   const response = await chain.invoke({
     input: prompt,
   })

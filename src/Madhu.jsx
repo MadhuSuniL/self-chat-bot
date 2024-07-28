@@ -12,9 +12,9 @@ export default function Madhu() {
   const [chat, setChat] = useState([welcome]);
 
   const scroll = () => {
-    let ele = document.getElementById('scroll-ele')
+    let ele = document.getElementById('chats')
     if (ele) {
-      ele.scrollIntoView({ behavior:'smooth' });
+      ele.scrollTop = ele.scrollHeight;
     }
   }
 
@@ -38,12 +38,12 @@ export default function Madhu() {
   }, [chat, isLoading]);
 
   return (
-    <div className="bg-gradient h-screen flex justify-center items-center">
+    <div id='chat2' className="bg-gradient h-screen flex justify-center items-center">
       <div className=" bg-transparent text-black w-full max-w-[700px] h-full flex flex-col rounded">
         <div className='flex-0'>
           <ChatHeader isLoading = {isLoading} setPrompt = {setPrompt} setPromptA = {setPromptA} get_answer = {get_answer} />
         </div>
-        <div className="flex-1 overflow-auto">
+        <div id='chats' className="flex-1 overflow-auto">
           <Chat 
             chat={chat} 
             prompt={promptA} 
