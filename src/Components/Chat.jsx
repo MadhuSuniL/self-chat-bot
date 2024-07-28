@@ -29,7 +29,7 @@ const Chat = ({
             isLoading && 
             <Prompt text = {prompt}/>
         }
-        <span id='scroll-ele'></span>
+        <span id='chat-end'></span>
     </div>
   )
 }
