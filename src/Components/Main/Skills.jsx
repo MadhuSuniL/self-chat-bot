@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaPython, FaReact } from 'react-icons/fa';
+import { FaPython, FaReact, FaAws  } from 'react-icons/fa';
 import { SiDjango, SiTailwindcss, SiBootstrap, SiRedux , SiPytorch, SiAlgorand, SiRsocket, SiPandas, SiNumpy } from 'react-icons/si';
 import { TbDatabaseSearch, TbBinaryTree } from "react-icons/tb";
 import { useInView } from 'react-intersection-observer';
@@ -19,6 +19,7 @@ const skills = [
   { name: 'Django Channels', icon: <SiRsocket /> },
   { name: 'Pandas', icon: <SiPandas /> },
   { name: 'Numpy', icon: <SiNumpy /> },
+  { name: 'Aws', icon: <FaAws/> },
   { name: 'NLP', icon: <span style={{fontFamily: 'monospace'}} className='text-sm font-bold bg-orange text-white p-2 rounded-tl-2xl rounded-br-2xl'>NLP</span>  },
   { name: 'Machine Learning', icon: <SiAlgorand /> },
   { name: 'Deep Learning', icon: <SiPytorch /> }
