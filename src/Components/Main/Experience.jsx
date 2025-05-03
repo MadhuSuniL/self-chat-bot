@@ -1,10 +1,26 @@
 import React from 'react';
 import BackendDev from '../../assets/backend_dev2.png'
 import FullStack from '../../assets/full_stack.png'
+import AIEngineer from '../../assets/ai_engineer.png'
 import { useInView } from 'react-intersection-observer';
 import { ReactTyped } from "react-typed";
 
 const experiences = [
+  {
+    img: AIEngineer,
+    title: 'End-to-End Python & AI Engineer',
+    company: 'DTSkill',
+    duration: 'September 2024 - Present',
+    location: 'Remote',
+    responsibilities: [
+      'Architected and developed scalable end-to-end solutions integrating Python, Django, React.js, and AI models.',
+      'Designed and deployed deep learning and machine learning pipelines for real-world apps.',
+      'Built RESTful APIs and real-time WebSocket services with Django Rest Framework and Django Channels.',
+      'Created and deployed Generative AI applications including AI agents, ChatGPT-like conversational backends, and custom GPTs.',
+      'Collaborated with cross-functional teams to optimize performance, enhance usability, and streamline DevOps workflows.',
+      'Integrated data analytics and AI-driven features into full-stack applications to improve user experience and decision-making.'
+    ]
+  },
   {
     img: FullStack,
     title: 'Python Full Stack Developer',
@@ -38,25 +54,25 @@ const Experience = () => {
   const { ref, inView } = useInView({
     triggerOnce: true, // Only trigger once
     threshold: 0.5, // When at least 10% of the element is visible
-});
+  });
   const [isTyping, setIsTyping] = React.useState(true)
   return (
     <div id='experience' className="py-10">
       <div ref={ref} className="max-w-[1100px] mx-auto min-h-72 py-10 px-20">
         {
-            inView &&
-            <ReactTyped
-              strings={[`
+          inView &&
+          <ReactTyped
+            strings={[`
                   <h4 class="sub-heading">Professional</h4>
                   <h1 class="heading blue">
                     <span class="blue">Experience</span>
                   </h1>                  
                 `]}
-              typeSpeed={5}
-              showCursor={false}
-              onBegin={()=>setIsTyping(true)}
-              onComplete={() => setIsTyping(false)}
-            />
+            typeSpeed={5}
+            showCursor={false}
+            onBegin={() => setIsTyping(true)}
+            onComplete={() => setIsTyping(false)}
+          />
         }
       </div>
       {
@@ -66,7 +82,7 @@ const Experience = () => {
             <div key={index} className="grid md:grid-cols-3 gap-3 items-center bg-gradient-to-t from-sky-500 hover:via-transparent to-transparent shadow-lg shadow-sky-500 rounded-lg p-8 transition-transform transform hover:scale-[1.01]">
               <img src={experience.img} alt={experience.title} className="h-full w-full object-cover rounded-lg md:col-span-1" />
               <div className="md:col-span-2">
-                <h2 className="text-2xl font-bold text-sky-500 underline underline-offset-8 mb-4" style={{fontFamily:'monospace'}}>{experience.title}</h2>
+                <h2 className="text-2xl font-bold text-sky-500 underline underline-offset-8 mb-4" style={{ fontFamily: 'monospace' }}>{experience.title}</h2>
                 <h3 className="text-xl font-medium text-gray-700">{experience.company}</h3>
                 <p className="text-gray-600 mb-4">{experience.duration}, {experience.location}</p>
                 <ul className="list-disc list-inside text-gray-700 space-y-2">

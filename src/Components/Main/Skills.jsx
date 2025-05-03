@@ -1,7 +1,8 @@
 import React from 'react';
-import { FaPython, FaReact, FaAws  } from 'react-icons/fa';
-import { SiDjango, SiTailwindcss, SiBootstrap, SiRedux , SiPytorch, SiAlgorand, SiRsocket, SiPandas, SiNumpy } from 'react-icons/si';
-import { TbDatabaseSearch, TbBinaryTree } from "react-icons/tb";
+import { FaPython, FaReact, FaAws } from 'react-icons/fa';
+import { SiDjango, SiTailwindcss, SiBootstrap, SiRedux, SiPytorch, SiAlgorand, SiRsocket, SiPandas, SiNumpy } from 'react-icons/si';
+import { TbDatabaseSearch, TbBinaryTree, TbBrandNextjs } from "react-icons/tb";
+import { GiBrain } from "react-icons/gi";
 import { useInView } from 'react-intersection-observer';
 import { ReactTyped } from "react-typed";
 
@@ -12,43 +13,45 @@ const skills = [
   { name: 'Data structures', icon: <TbBinaryTree /> },
   { name: 'Web Scraping', icon: <TbDatabaseSearch /> },
   { name: 'React JS', icon: <FaReact /> },
+  { name: 'Next JS', icon: <TbBrandNextjs /> },
   { name: 'Redux', icon: <SiRedux /> },
   { name: 'Tailwind CSS', icon: <SiTailwindcss /> },
   { name: 'Bootstrap', icon: <SiBootstrap /> },
-  { name: 'Rest Framework', icon: <span style={{fontFamily: 'monospace'}} className='text-sm font-bold bg-orange text-white p-2 rounded-tl-2xl rounded-br-2xl'>REST</span> },
+  { name: 'Rest Framework', icon: <span style={{ fontFamily: 'monospace' }} className='text-sm font-bold bg-orange text-white p-2 rounded-tl-2xl rounded-br-2xl'>REST</span> },
   { name: 'Django Channels', icon: <SiRsocket /> },
   { name: 'Pandas', icon: <SiPandas /> },
   { name: 'Numpy', icon: <SiNumpy /> },
-  { name: 'Aws', icon: <FaAws/> },
-  { name: 'NLP', icon: <span style={{fontFamily: 'monospace'}} className='text-sm font-bold bg-orange text-white p-2 rounded-tl-2xl rounded-br-2xl'>NLP</span>  },
+  { name: 'Aws', icon: <FaAws /> },
+  { name: 'NLP', icon: <span style={{ fontFamily: 'monospace' }} className='text-sm font-bold bg-orange text-white p-2 rounded-tl-2xl rounded-br-2xl'>NLP</span> },
   { name: 'Machine Learning', icon: <SiAlgorand /> },
-  { name: 'Deep Learning', icon: <SiPytorch /> }
+  { name: 'Deep Learning', icon: <SiPytorch /> },
+  { name: 'Generative AI', icon: <GiBrain /> }
 ];
 
 const Skills = () => {
   const { ref, inView } = useInView({
     triggerOnce: true, // Only trigger once
     threshold: 0.5, // When at least 10% of the element is visible
-});
+  });
   const [isTyping, setIsTyping] = React.useState(true)
 
   return (
     <div id='skills' className="py-10">
       <div ref={ref} className="max-w-[1100px] mx-auto min-h-72 py-10 px-20">
         {
-            inView &&
-            <ReactTyped
-              strings={[`
+          inView &&
+          <ReactTyped
+            strings={[`
                   <h4 class="sub-heading">Trending</h4>
                   <h1 class="heading orange">
                     <span class="orange">Skills</span>
                   </h1>
                 `]}
-              typeSpeed={10}
-              showCursor={false}
-              onBegin={()=>setIsTyping(true)}
-              onComplete={() => setIsTyping(false)}
-            />
+            typeSpeed={10}
+            showCursor={false}
+            onBegin={() => setIsTyping(true)}
+            onComplete={() => setIsTyping(false)}
+          />
         }
       </div>
       {
@@ -61,7 +64,7 @@ const Skills = () => {
               </div>
               <div>
                 <ReactTyped
-                strings={[`
+                  strings={[`
                   <h3 class="text-xl font-semibold text-gray-500">${skill.name}</h3>
                   `]}
                   typeSpeed={10}

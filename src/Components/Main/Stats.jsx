@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 
@@ -18,7 +18,7 @@ const formatNumber = (number) => {
 const Stats = () => {
     const [hours, setHours] = useState(0);
     const [cups, setCups] = useState(0);
-    const projects = 7;
+    const projects = 30;
 
     const { ref, inView } = useInView({
         triggerOnce: true, // Only trigger once
@@ -57,6 +57,7 @@ const Stats = () => {
                         ) : (
                             formatNumber(hours)
                         )}
+                        +
                     </h1>
                     <h3>Hours</h3>
                 </div>
@@ -72,6 +73,7 @@ const Stats = () => {
                         ) : (
                             formatNumber(projects)
                         )}
+                        +
                     </h1>
                     <h3>Projects</h3>
                 </div>
@@ -87,6 +89,7 @@ const Stats = () => {
                         ) : (
                             formatNumber(cups)
                         )}
+                        +
                     </h1>
                     <h3>Cups of Coffee</h3>
                 </div>
