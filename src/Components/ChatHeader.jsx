@@ -32,7 +32,7 @@ const ChatHeader = ({
             <img src={MadhuImg} alt="Madhu" className='rounded-full' />
           </div>
           <div className='flex flex-col'>
-            <span className="font-semibold">Madhu Bagamma Gari</span>
+            <span className="font-semibold">Madhu</span>
             <span className="text-sm font-semibold">
               {isLoading ? (
                 <span className="typing">
@@ -55,29 +55,29 @@ const ChatHeader = ({
       </div>
       <div className='flex items-center'>
         <div className='flex items-center shadow-md p-2 rounded'>
-          <button 
+          <button
             onClick={() => {
               setPrompt('I want to make a phone call you ?');
-            }} 
-            className="text-white mx-2" 
+            }}
+            className="text-white mx-2"
             title="Voice Call"
           >
             <FaPhone size={15} className='active:animate-ping hover:scale-105' />
           </button>
-          <button 
+          <button
             onClick={() => {
               setPrompt('Share your email address for google meet');
-            }} 
-            className="text-white mx-2" 
+            }}
+            className="text-white mx-2"
             title="Video Call"
           >
             <IoVideocam size={20} className='active:animate-ping hover:scale-105' />
           </button>
         </div>
         <div className="relative" ref={menuRef}>
-          <button 
-            onClick={() => setMenuOpen(!menuOpen)} 
-            className="text-white mx-2" 
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="text-white mx-2"
             title="Menu"
           >
             <CiMenuKebab size={20} className='mx-2 mt-2 hover:scale-105' />
@@ -87,9 +87,9 @@ const ChatHeader = ({
               <ul className="py-1">
                 <li className="flex items-center hover:bg-purple-500 rounded-lg">
                   <FaFileDownload size={17} className="mx-2 text-white" />
-                  <a 
-                    href="/resume.pdf" 
-                    target="_blank" 
+                  <a
+                    href="/resume.pdf"
+                    target="_blank"
                     // download 
                     className="block px-2 py-2 text-sm w-full font-[600] text-white"
                   >
@@ -98,10 +98,10 @@ const ChatHeader = ({
                 </li>
                 <li className="flex items-center hover:bg-purple-500 rounded-lg">
                   <FaGithub size={17} className="mx-2 text-white" />
-                  <a 
-                    href="https://github.com/MadhuSuniL" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <a
+                    href="https://github.com/MadhuSuniL"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block px-2 py-2 text-sm w-full font-[600] text-white"
                   >
                     Open GitHub
@@ -109,10 +109,10 @@ const ChatHeader = ({
                 </li>
                 <li className="flex items-center hover:bg-purple-500 rounded-lg">
                   <FaLinkedin size={17} className="mx-2 text-white" />
-                  <a 
-                    href="https://www.linkedin.com/in/madhu-bagamma-gari-833a84239" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
+                  <a
+                    href="https://www.linkedin.com/in/madhu-bagamma-gari-833a84239"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block px-2 py-2 text-sm w-full font-[600] text-white "
                   >
                     Open LinkedIn
@@ -120,8 +120,8 @@ const ChatHeader = ({
                 </li>
                 <li className="flex items-center hover:bg-purple-500 rounded-lg">
                   <FaEnvelope size={17} className="mx-2 text-white" />
-                  <a 
-                    href="mailto:bagammagarimadhu@gmail.com" 
+                  <a
+                    href="mailto:bagammagarimadhu@gmail.com"
                     className="block px-2 py-2 text-sm w-full font-[600] text-white"
                   >
                     Send Email
@@ -129,8 +129,8 @@ const ChatHeader = ({
                 </li>
                 <li className="flex items-center hover:bg-purple-500 rounded-lg">
                   <FaPhone size={17} className="mx-2 text-white" />
-                  <a 
-                    href="tel:+919948377187" 
+                  <a
+                    href="tel:+919948377187"
                     className="block px-2 py-2 text-sm w-full font-[600] text-white"
                   >
                     Call Phone
